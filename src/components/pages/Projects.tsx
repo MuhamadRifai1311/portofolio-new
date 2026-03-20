@@ -77,7 +77,7 @@ export default function Projects() {
           damping: 8,
         }} className="grid grid-cols-1 lg:grid-cols-3 gap-5">
         {otherProject.map((t, key) => (
-          <div key={key} onClick={() => navigate(`/project/${t.slug}`)} className="flex flex-col rounded-xl overflow-hidden border group border-white/10 hover:border-[#3EE0CF] transition duration-500 ease-in-out cursor-pointer">
+          <div key={key} onClick={() => navigate(`/project/${t.slug}`)} className="flex flex-col  lg:h-120 rounded-xl overflow-hidden border group border-white/10 hover:border-[#3EE0CF] transition duration-500 ease-in-out cursor-pointer">
             <div className="overflow-hidden">
               <img
                 src={t.img}
@@ -85,7 +85,7 @@ export default function Projects() {
                 className="w-full h-40 lg:h-50 object-center group-hover:scale-110 transition duration-500 ease-in-out"
               />
             </div>
-            <div className="flex flex-col gap-3 p-5 bg-[#0E1115]">
+            <div className="flex flex-col gap-3 p-5 bg-[#0E1115] lg:h-70">
               <div className="flex justify-between w-full">
                 <p className="text-primary">{t.periode}</p>
                 <ExternalLink className="text-paragraf" size={15} />
