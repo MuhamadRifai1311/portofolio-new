@@ -1,5 +1,24 @@
 export const project = [
   {
+    img: "/assets/project/befawned/image.png",
+    periode: "2025",
+    slug: "befawned",
+    title: "Befawned",
+    desc: "Saya mengembangkan website ini dengan merekonstruksi desain dari Webflow menggunakan React, TypeScript, Tailwind CSS, shadcn, GSAP, dan Framer Motion. Proyek ini bertujuan untuk mengasah kemampuan frontend saya, khususnya dalam proses slicing desain menjadi implementasi yang responsif dan interaktif.",
+    tech: [
+      "React",
+      "Typescript",
+      "TailwindCss",
+      "Shadcn",
+      "Framer Motion",
+      "Gsap"
+    ],
+    children: ["/assets/project/befawned/image.png"],
+    featured: false,
+    link: "https://befawned.vercel.app",
+    github: null
+  },
+  {
     img: "/assets/project/bookingHotel/Dashboard User.png",
     periode: "2025",
     slug: "booking-hotel",
@@ -59,4 +78,5 @@ export const project = [
     features: ['Real-time Inventory', 'Report transaction', 'ERP System', 'Export Report'],
     github: null
   },
+  
 ];

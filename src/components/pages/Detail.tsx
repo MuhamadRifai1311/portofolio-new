@@ -1,7 +1,7 @@
-import { useParams } from "react-router"
+import { useParams, useNavigate } from "react-router-dom"
 import { project } from "../../config/project"
 import { CalendarDaysIcon, MoveLeftIcon, CircleCheck, Github } from "lucide-react"
-import { useNavigate } from "react-router"
+
 import { useEffect, useState } from "react"
 
 export default function Detail() {
@@ -48,13 +48,13 @@ export default function Detail() {
                         </div>
                     ))}
                 </div>
-                <div className="relative w-full h-55 lg:h-110 overflow-hidden rounded-xl shadow-[0_0_15px_#3EE0CF]">
+                <div className="relative w-full h-45 lg:h-110 overflow-hidden rounded-xl shadow-[0_0_15px_#3EE0CF]">
                     {projectBySlug?.children.map((img, index) => (
                         <img
                             key={index}
                             src={img}
                             alt="project"
-                            className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ease-iontaint ${index === visibleCount ? "opacity-100" : "opacity-0"}`}
+                            className={`absolute inset-0 w-full h-full object-center transition-opacity duration-1000 ease-in-out ${index === visibleCount ? "opacity-100" : "opacity-0"}`}
                         />
                     ))}
                 </div>
@@ -64,18 +64,22 @@ export default function Detail() {
                         <p className="text-md text-paragraf text-justify">{projectBySlug?.desc}</p>
                     </div>
                     <div className="flex flex-col gap-4">
-                        <div className="w-full lg:w-50 h-fit p-4 rounded-2xl border border-white/10">
-                            <h2 className="text-primary font-medium text-md mb-2">Features</h2>
-                            {projectBySlug?.features.map((t) => (
-                                <div className="flex gap-2 items-center mb-3">
-                                    <CircleCheck size={15} className="text-primary" />
-                                    <p className="text-paragraf text-xs">{t}</p>
-                                </div>
-                            ))}
-                        </div>
+                        {projectBySlug?.features && (
+                            <div className="w-full lg:w-50 h-fit p-4 rounded-2xl border border-white/10">
+                                <>
+                                    <h2 className="text-primary font-medium text-md mb-2">Features</h2>
+                                    {projectBySlug.features.map((t, i) => (
+                                        <div key={i} className="flex gap-2 items-center mb-3">
+                                            <CircleCheck size={15} className="text-primary" />
+                                            <p className="text-paragraf text-xs">{t}</p>
+                                        </div>
+                                    ))}
+                                </>
+                            </div>
+                        )}
                         {projectBySlug?.github && (
                             <a
-                                href={projectBySlug.github}
+                                href={projectBySlug?.github}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-50 flex gap-3 text-paragraf transition duration-500 ease-in-out items-center rounded-2xl py-3 px-2 border border-white/10 hover:border-[#3EE0CF] hover:text-[#3EE0CF] cursor-pointer"
@@ -85,6 +89,16 @@ export default function Detail() {
                             </a>
                         )}
 
+                        {projectBySlug?.link && (
+                            <a
+                                href={projectBySlug.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-primary underline"
+                            >
+                                Live Preview
+                            </a>
+                        )}
                     </div>
                 </div>
 
