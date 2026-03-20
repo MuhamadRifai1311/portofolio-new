@@ -1,7 +1,7 @@
 export const project = [
   {
     img: "/assets/project/befawned/image.png",
-    periode: "2025",
+    periode: "2026",
     slug: "befawned",
     title: "Befawned",
     desc: "Saya mengembangkan website ini dengan merekonstruksi desain dari Webflow menggunakan React, TypeScript, Tailwind CSS, shadcn, GSAP, dan Framer Motion. Proyek ini bertujuan untuk mengasah kemampuan frontend saya, khususnya dalam proses slicing desain menjadi implementasi yang responsif dan interaktif.",

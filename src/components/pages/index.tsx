@@ -16,7 +16,7 @@ export default function Dashboard() {
   return (
     <div id="home" className="lg:h-screen py-20 lg:py-20 px-10 lg:px-30 w-full">
       {/* grid 1 */}
-      <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-0 items-center h-screen lg:h-[500px]">
+      <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-0 items-center h-full lg:h-125">
         <motion.div initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{
@@ -70,9 +70,7 @@ export default function Dashboard() {
           </div>
         </motion.div>
         {/* grid 2 */}
-        <div className="hidden lg:block">
-          <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
-        </div>
+       
         <motion.div initial={{ opacity: 0, y: -100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
@@ -80,8 +78,8 @@ export default function Dashboard() {
               type: "spring",
               stiffness: 50,
               damping: 8,
-            }} className="block lg:hidden border  rounded-2xl mx-4 h-55 shadow-[0_0_7px_#3EE0CF] overflow-hidden ">
-          <img src="/assets/img.webp" alt="" className="w-full object-cover h-full" />
+            }} className="flex border rounded-2xl mx-4 h-65 lg:h-96 w-full shadow-[0_0_7px_#3EE0CF] overflow-hidden ">
+          <img src="/assets/imgPai.jpeg" alt="" className="w-full object-cover h-full" />
         </motion.div>
       </div>
     </div>
