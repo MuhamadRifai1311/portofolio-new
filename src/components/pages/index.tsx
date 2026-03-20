@@ -1,5 +1,4 @@
 import { Code, Sparkles } from "lucide-react";
-import Lanyard from "../Lanyard/Lanyard";
 import { motion } from 'motion/react'
 
 const tech = [
