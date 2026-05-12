@@ -1,11 +1,12 @@
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 const data = [
   {
     periode: "24 November 2025 - Sekarang",
     perusahaan: "PT Trans Berjaya Khatulistiwa (Tiketux)",
     job: "Web Developer Internship",
-    desc: "",
-    tech: ["Nuxt.js", "TailwindCss", "Laravel", "Vue", "MySQL", "Shadcn", "Visual Studio Code",],
+    desc: "Berperan dalam pengembangan antarmuka pengguna website Passion Dental Care menggunakan Nuxt.js dan Vue.js, membangun struktur komponen yang termodulasi untuk menjaga konsistensi tampilan di seluruh halaman, sekaligus mengimplementasikan strategi rendering SSR/SSG guna meningkatkan performa dan optimasi SEO. Selain itu, melakukan integrasi antarmuka dengan layanan backend secara efisien melalui RESTful API, memastikan alur data yang akurat serta pengalaman pengguna yang cepat, mulus, dan dinamis.",
+    descOption: "Berkontribusi juga dalam pengembangan backend sistem CMS Remedis menggunakan Laravel.",
+    tech: ["Nuxt.js", "TailwindCss", "Laravel", "Vue", "MySQL", "Shadcn",],
   },
   {
     periode: "3 November 2023 - 20 Desember 2024",
@@ -16,7 +17,6 @@ const data = [
       "Figma",
       "Laravel",
       "MySQL",
-      "Visual Studio Code",
       "TailwindCss",
       "Blade",
     ],
@@ -24,17 +24,17 @@ const data = [
 ];
 export default function Experience() {
   return (
-    <motion.div 
-    initial={{ opacity: 0, x: -100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{
-          duration: 0.8,
-          type: "spring",
-          stiffness: 50,
-          damping: 8,
-        }}
-    className="container w-full px-5 lg:px-30 py-10 lg:py-20">
-        {/* experience title */}
+    <motion.div
+      initial={{ opacity: 0, x: -100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{
+        duration: 0.8,
+        type: "spring",
+        stiffness: 50,
+        damping: 8,
+      }}
+      className="container w-full px-5 lg:px-30 py-10 lg:py-20 mx-auto max-w-7xl">
+      {/* experience title */}
       <div className="flex flex-col gap-4">
         <p className="text-sm text-primary">~/Experience</p>
         <h2 className="flex gap-2 items-center">
@@ -58,7 +58,10 @@ export default function Experience() {
                 <h2 className="text-white text-lg lg:text-xl font-bold">{t.periode}</h2>
                 <h3 className="text-white text-md lg:text-lg ">{t.perusahaan}</h3>
                 <h4 className="text-white text-sm lg:text-md font-light">{t.job}</h4>
-                <p className="text-[#707D8F] text-xs lg:text-sm">{t.desc}</p>
+                <p className="text-[#707D8F] text-xs lg:text-sm text-justify">{t.desc}</p>
+                {t.descOption && (
+                  <p className="text-[#707D8F] text-xs lg:text-sm text-justify">{t.descOption}</p>
+                )}
               </div>
 
               <div className="flex gap-3 flex-wrap mt-3">

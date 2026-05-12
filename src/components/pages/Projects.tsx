@@ -11,7 +11,7 @@ export default function Projects() {
   const otherProject = project.filter(t => !t.featured)
   const navigate = useNavigate();
   return (
-    <div id="project" className="w-full px-10 lg:px-30 py-10 lg:py-20 bg-black/10">
+    <div id="project" className="w-full px-10 lg:px-30 py-10 lg:py-20 bg-black/10 mx-auto max-w-7xl">
       {/* project title */}
       <motion.div
       initial={{ opacity: 0, x: -100 }}

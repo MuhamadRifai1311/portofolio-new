@@ -69,7 +69,7 @@ const tagItem = {
 
 export default function About() {
   return (
-    <div id="about" className="container w-full px-10 lg:px-30 py-10 lg:py-20">
+    <div id="about" className="container w-full px-10 lg:px-30 py-10 lg:py-20 mx-auto max-w-7xl">
       {/* tittle about us */}
       <motion.div
         initial={{ opacity: 0, x: -100 }}

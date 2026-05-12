@@ -8,7 +8,7 @@ const socialMedia = [
 ];
 export default function Contact() {
   return (
-    <div id="contact" className="py-10 lg:py-20 px-10 lg:px-50 w-full">
+    <div id="contact" className="py-10 lg:py-20 px-10 lg:px-50 w-full mx-auto max-w-7xl">
       <motion.div initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{

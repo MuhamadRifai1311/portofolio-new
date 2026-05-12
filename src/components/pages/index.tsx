@@ -10,10 +10,11 @@ const tech = [
   "Shadcn",
   "MySql",
   "TypeScript",
+  "Postman",
 ];
 export default function Dashboard() {
   return (
-    <div id="home" className="lg:h-screen py-20 lg:py-20 px-10 lg:px-30 w-full">
+    <div id="home" className=" py-20 lg:py-20 px-10 lg:px-30 w-full mx-auto max-w-7xl">
       {/* grid 1 */}
       <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-0 items-center h-full lg:h-125">
         <motion.div initial={{ opacity: 0, x: -100 }}
@@ -55,7 +56,7 @@ export default function Dashboard() {
               </button>
             </a>
           </div>
-          <div className="flex flex-wrap lg:flex-row gap-2 pt-3 lg:pt-5">
+          <div className="flex flex-wrap lg:flex-row gap-2 pt-3 lg:pt-5 w-full lg:w-3/4">
             {tech.map((item, index) => (
               <div
                 key={index}

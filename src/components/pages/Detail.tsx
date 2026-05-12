@@ -33,7 +33,7 @@ export default function Detail() {
 
 
     return (
-        <div className="py-30 px-10 lg:px-70 w-full">
+        <div className="py-30 px-10 lg:px-70 w-full mx-auto max-w-7xl">
             <button onClick={() => navigate('/')} className="text-paragraf text-sm flex gap-3 items-center cursor-pointer"><MoveLeftIcon size={22} />Back to Projects</button>
             <div className="pt-5 lg:pt-10 flex flex-col gap-6">
                 <div className="px-2 py-1 w-fit flex gap-1 items-center rounded-2xl bg-[#3EE0CF]/10 text-primary">
